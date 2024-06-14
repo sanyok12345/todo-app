@@ -1,10 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <body>
-        <h1>
-            Hello World!
-        </h1>
+        <div class="app">
+            <div class="header">
+                <h1>TODO List</h1>
+            </div>
+            <div class="content">
+                <div class="input">
+                    <input type="text" name="task" placeholder="Enter task">
+                    <button type="submit">Add Task</button>
+                    <img src="https://img.icons8.com/ios/50/000000/settings.png"/>
+                </div>
+                <div class="settings">
+                    <div class="page">
+                        <div class="element">
+                            <label for="language">Language:</label>
+                            <select>
+                                <option value="en">English</option>
+                                <option value="lv">Ļatviešu</option>
+                                <option value="ru">Русский</option>
+                            </select>
+                        </div>
+                        <div class="element">
+                            <label for="localstorage">LocalStorage: </label>
+                            <input type="checkbox">
+                        </div>
+                        <div class="element">
+                            <button type="button">Reload</button>
+                            <button type="button">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="list">
+                    <div class="element">
+                        <input type="checkbox">
+                        <div class="text">
+                            <input type="text" value="Task 1">
+                        </div>
+                        <div class="actions">
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox">
+                        <div class="text">
+                            <input type="text" value="Task 2">
+                        </div>
+                        <div class="actions">
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <input type="checkbox">
+                        <div class="text">
+                            <input type="text" value="Task 3">
+                        </div>
+                        <div class="actions">
+                            <button type="button">Edit</button>
+                            <button type="button">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="script.js"></script>
 </html>
