@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <body>
         <div class="app">
             <div class="header">
@@ -11,7 +13,7 @@
             <div class="content">
                 <div class="input">
                     <input type="text" name="task" placeholder="Enter task">
-                    <button type="submit">Add Task</button>
+                    <button type="submit" onclick="addTaskToLocalStorage()">Add Task</button>
                     <img src="https://img.icons8.com/ios/50/000000/settings.png"/>
                 </div>
                 <div class="settings">
@@ -26,7 +28,7 @@
                         </div>
                         <div class="element">
                             <label for="localstorage">LocalStorage: </label>
-                            <input type="checkbox">
+                            <input type="checkbox" checked>
                         </div>
                         <div class="element">
                             <button type="button">Reload</button>
@@ -35,40 +37,11 @@
                     </div>
                 </div>
                 <div class="separator"></div>
-                <div class="list">
-                    <div class="element">
-                        <input type="checkbox">
-                        <div class="text">
-                            <input type="text" value="Task 1">
-                        </div>
-                        <div class="actions">
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <input type="checkbox">
-                        <div class="text">
-                            <input type="text" value="Task 2">
-                        </div>
-                        <div class="actions">
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <input type="checkbox">
-                        <div class="text">
-                            <input type="text" value="Task 3">
-                        </div>
-                        <div class="actions">
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </div>
-                    </div>
+                <div class="list" id="taskList">
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     <script src="script.js"></script>
 </html>
