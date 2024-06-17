@@ -1,0 +1,268 @@
+.todo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.groups {
+    max-width: 20%;
+}
+
+.groups .head {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.groups .head .search {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.groups .head .search input {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.groups .body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+   
+    max-height: calc(100vh - 120px);
+}
+
+.groups .body .group-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.groups .body .group-item input {
+   
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+.groups .body .group-item.active input {
+    color: #007bff;
+}
+
+
+.groups .body .group-item.active {
+    color: #007bff;
+}
+
+.groups .body .group-item:hover {
+    background-color: #f9f9f9;
+}
+
+.groups .bottom {
+    display: flex;
+    margin-top: auto;
+}
+
+.groups .bottom .add-list {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.groups .bottom .add-list .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.groups .bottom .add-list .text {
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.groups .bottom .add-list:hover {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.groups .bottom .add-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.groups .bottom .add-category .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.groups .bottom .add-category:hover {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.groups .separator {
+    width: 100%;
+    height: 2px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.records {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    max-width: 80%;
+    min-height: 500px;
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+    border-top-left-radius: 12px;
+}
+
+.records .header .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.records .header .description {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.records .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 240px);
+}
+
+.records .body .info {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.records .body .info .content {
+    text-align: center;
+    max-width: 140px;
+    padding: 25px;
+    border-radius: 5px;
+   
+}
+
+.records .body .info .content .icon {
+    width: 56px;
+    height: 56px;
+}
+
+.records .body .info .content .title {
+    font-size: 22px;
+    color: white;
+    margin-top: 10px;
+}
+
+.records .body .info .content .description {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+.records .bottom {
+   
+    margin-top: auto;
+}
+
+.record-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.record-item .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.record-item .description {
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.record-item input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+   
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.record-item .input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.record-item .add {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.record-item .right {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+}
+
+.record-item .right .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.record-item .add:hover {
+    background-color: #0056b3;
+}

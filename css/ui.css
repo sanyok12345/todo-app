@@ -1,0 +1,85 @@
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+
+   
+    --event-color: #f8f9fa;
+    --background-color: #f8f9fa;
+    --active-color: #f8f9fa;
+
+   
+    --border-radius: 0px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-color: #dee2e6;
+    --padding: 16px;
+    --gap: 0px;
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.list .item {
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--gap);
+}
+
+.list .item:hover {
+    background-color: var(--active-color);
+}
+
+.list .item .before {
+    padding: var(--padding);
+    background-color: var(--event-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.list .item .content {
+    padding: var(--padding);
+}
+
+
+.block {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.block .head {
+    padding: var(--padding);
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.block .body {
+    display: flex;
+    flex: 1;
+    gap: var(--gap);
+}
+
+.block .body .left,
+.block .body .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.block .body .separator {
+    width: 2px;
+    height: 100%;
+    align-self: center;
+}
