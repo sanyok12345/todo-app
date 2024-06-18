@@ -12,6 +12,15 @@ const state = {
     activeGroup: null,
     groups: null
 };
+function displayWarning(message) {
+    const warningWindow = document.createElement("div");
+    warningWindow.classList.add("warning-window");
+    warningWindow.innerHTML = message;
+    document.body.appendChild(warningWindow);
+    setTimeout(() => {
+        document.body.removeChild(warningWindow);
+    }, 2000);
+}
 
 search.addEventListener("input", (event) => {
     const value = event.target.value;
@@ -28,7 +37,10 @@ createTask.addEventListener("keydown", (event) => {
             .find(group => {
                 return (group.name) === state.activeGroup
             });
-
+        if (event.target.value === "") {
+            displayWarning("Please enter a task name");
+            return;
+        }
         group.tasks.push({
             name: event.target.value,
             description: "",
@@ -68,6 +80,10 @@ const renderGroups = (items = state.groups) => {
 
                 input.addEventListener("keydown", (event) => {
                     if (event.key === "Enter") {
+                        if (input.value === "") {
+                            displayWarning("Group name cant be empty!");
+                            return;
+                        }
                         group.name = input.value;
                         state.activeGroup = group.name;
                         render();
@@ -181,7 +197,7 @@ const renderRecords = () => {
             titleElement.innerHTML = "";
             titleElement.appendChild(input);
             input.focus();
-        
+
         });
 
         if (task.completed) {
@@ -220,18 +236,18 @@ const renderRecords = () => {
             group.tasks = group.tasks.filter(t => t !== task);
             render();
         };
-        
+
         rigthElement.appendChild(deleteElement);
-        
+
         contentElement.appendChild(titleElement);
-        contentElement.appendChild(descriptionElement);	
+        contentElement.appendChild(descriptionElement);
         taskElement.appendChild(iconElement);
         taskElement.appendChild(contentElement);
         taskElement.appendChild(rigthElement);
         records.appendChild(taskElement);
     }
 
-    
+
 }
 
 const render = () => {

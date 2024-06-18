@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-   
+
     max-height: calc(100vh - 120px);
 }
 
@@ -56,7 +56,7 @@
 }
 
 .groups .body .group-item input {
-   
+
     border: none;
     background-color: transparent;
     font-size: 16px;
@@ -166,7 +166,7 @@
 }
 
 .records .body .info {
-   
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -178,7 +178,7 @@
     max-width: 140px;
     padding: 25px;
     border-radius: 5px;
-   
+
 }
 
 .records .body .info .content .icon {
@@ -199,7 +199,7 @@
 }
 
 .records .bottom {
-   
+
     margin-top: auto;
 }
 
@@ -211,7 +211,7 @@
     padding: 12px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .record-item .icon {
@@ -229,7 +229,7 @@
     border: none;
     outline: none;
     background-color: transparent;
-   
+
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
@@ -265,4 +265,19 @@
 
 .record-item .add:hover {
     background-color: #0056b3;
+}
+
+.warning-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FF0000;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
 }
